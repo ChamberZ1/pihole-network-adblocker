@@ -22,6 +22,9 @@ When a user types a website into a browser, their device sends a DNS query (typi
 
 The resolver looks up the IP address for that domain (using its own cache or by querying other DNS servers on the internet), then sends the answer back. The router passes that response to the user’s device, and the browser then knows which IP address to connect to in order to load the website.
 
+### Ads
+When a user visits a website that includes ads or tracking scripts, the browser does not only resolve the main site’s domain. It also issues additional DNS queries for third-party domains that serve ads, analytics, and other embedded content. Because these domains must still be resolved through DNS, Pi-hole can be used to identify and block many of these requests, stopping the unwanted content from loading.
+
 ### Pi-hole
 Pi-hole is a DNS sinkhole that protects devices from unwanted content. A DNS sinkhole acts as a DNS server that checks each requested domain against blocklists (and optionally allowlists). If the domain is allowed, Pi-hole forwards the query to an upstream DNS resolver and returns the resulting IP address to the client. If the domain is blocked, Pi-hole instead returns the non-routable address `0.0.0.0`, effectively preventing the connection.
 
