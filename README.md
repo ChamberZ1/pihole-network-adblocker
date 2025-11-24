@@ -30,6 +30,7 @@ Pi-hole is a DNS sinkhole that protects devices from unwanted content. A DNS sin
 
 ### Diagram
 ![Diagram of home network with Pi-hole](diagram.png)
+The diagram illustrates how DNS queries from a client in a home network are processed by Pi-hole and an upstream DNS resolver, including how blocked domains are returned as `0.0.0.0`.
 
 # Setup
 ### What I used: 
