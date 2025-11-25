@@ -42,9 +42,11 @@ The diagram illustrates how DNS queries from a client in a home network are proc
 - Computer (to write operating system to micro SD)
 
 ### Steps:
-1) TO BE CONTINUED
-
-2) 
+1) Download [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+2) Plug in microSD card to computer and run Raspberry Pi Imager
+3) Choose `Raspberry Pi Zero 2 W` for Device, and `Raspberry Pi OS Lite` for OS (the one that says "A port of Debian Bookworm...").
+4) Set hostname to something simple like `pihole`, create a Pi account, enter network info, and enable SSH w/ password auth.
+5) WAITING FOR MY MICRO USB CHARGER TO COME IN
 
 # Acknowledgements
 - [WesOps](https://www.youtube.com/watch?v=d_3h5n9mPdI) on YouTube. His video was what introduced me to Pi-hole and inspired me to give this a try.
