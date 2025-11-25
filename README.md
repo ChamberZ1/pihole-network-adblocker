@@ -45,7 +45,7 @@ The diagram illustrates how DNS queries from a client in a home network are proc
 1) Download [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 2) Plug in microSD card to computer and run Raspberry Pi Imager
 3) Choose `Raspberry Pi Zero 2 W` for Device, and `Raspberry Pi OS Lite` for OS (the one that says "A port of Debian Bookworm...").
-4) Set hostname to something simple like `pihole`, create a Pi account, enter network info, and enable SSH w/ password auth.
+4) Set hostname to something simple like "pihole", create a Pi account, enter network info, and enable SSH w/ password auth.
 5) WAITING FOR MY MICRO USB CHARGER TO COME IN
 
 # Acknowledgements
