@@ -79,7 +79,7 @@ Pi-hole web GUI
 # Limitations
 1) Pi-hole’s effectiveness at blocking ads/tracking and avoiding false positives depends heavily on the quality and maintenance of its blocklists (plus any additional RegEx rules).
 2) Pi-hole operates at the DNS layer. It can only filter domains in the DNS queries; raw IP addresses cannot be blocked.
-3) Pi-hole is great at blocking third-party ad domains, but if ads come from the same domain as the content (e.g. youtube.com serving both video + ads from the same hostname), Pi-hole can’t reliably discriminate between the two.
+3) Pi-hole is great at blocking third-party ad domains, but if ads come from the same domain as the content (e.g. youtube.com serving both video + ads from the same hostname), Pi-hole can’t reliably discriminate between the two. So it doesn't work on Duolingo ads :( Bummer I was hoping it would.
 4) Some clients have hard-coded DNS that would bypass Pi-hole entirely.
 5) If Pi-hole is interrupted, devices using only Pi-hole as DNS would fail to resolve domain names, disrupting many services as if there was no internet.
 6) Pi-hole logs clients by IP, but IPs can be dynamic. So logs over a longer timeframe may be confusing/misleading.
