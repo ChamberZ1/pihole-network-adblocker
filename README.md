@@ -60,6 +60,22 @@ I want to set just my iPhone to use Pi-hole for now. To do that:
 5) Enter Pi-hole's IP address.
 6) Remove other DNS servers to ensure the device uses Pi-hole.
 
+### Minor Tweaks
+1) I changed the number of days a query is kept in the DB to 21 to prevent my microSD card from filling up.
+2) I will likely increase the "Privacy Level" later on so that Pi-hole doesn't log as much details. For now, I want to keep it at full detail to play around with it.
+
+# Cool!
+1) RegEx rules can be added for custom domain blocking!
+2) Pi-hole could be used to potentially detect rogue devices. For example: If a host on the network (like an IoT device) is sending queries to suspicious domains, assuming Pi-hole is configured as its DNS server, those queries would be logged and inspected. (potential future experiment?) 
+
+# Limitations
+1) Pi-hole’s effectiveness at blocking ads/tracking and avoiding false positives depends heavily on the quality and maintenance of its blocklists (plus any additional RegEx rules).
+2) Pi-hole operates at the DNS layer. It can only filter domains in the DNS queries; raw IP addresses cannot be blocked.
+3) Pi-hole is great at blocking third-party ad domains, but if ads come from the same domain as the content (e.g. youtube.com serving both video + ads from the same hostname), Pi-hole can’t reliably discriminate between the two.
+4) Some clients have hard-coded DNS that would bypass Pi-hole entirely.
+5) If Pi-hole is interrupted, devices using only Pi-hole as DNS would fail to resolve domain names, disrupting many services as if there was no internet.
+6) Pi-hole logs clients by IP, but IPs can be dynamic. So logs over a longer timeframe may be confusing/misleading.
+
 # Acknowledgements
 - [WesOps](https://www.youtube.com/watch?v=d_3h5n9mPdI) on YouTube. His video was what introduced me to Pi-hole and inspired me to give this a try.
 - [Pi-hole](https://pi-hole.net/)
