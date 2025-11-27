@@ -43,9 +43,13 @@ The diagram illustrates how DNS queries from a client in a home network are proc
 4) Set hostname to something simple like "pihole", create a Pi account, enter network info, and enable SSH w/ password auth.
 5) Finish installing the OS onto the microSD, insert the microSD into the Pi, and connect the Pi to a power supply.
 6) Give the Pi a minute or so to finish booting, then open up cmd on your computer and type: `ssh [username]@[hostname].local` and enter the password. This allows us to SSH into the Raspberry Pi Zero 2 W and install Pi-hole.
-7) Go to [Pi-hole documentation](https://docs.pi-hole.net/main/basic-install/), copy the One-Step Automated Install command `curl -sSL https://install.pi-hole.net | bash`, paste into your terminal, and run.
-8) Follow the prompts.
-9) NEED TO SET STATIC IP NEXT.
+7) Go to [Pi-hole documentation](https://docs.pi-hole.net/main/basic-install/), copy the One-Step Automated Install command `curl -sSL https://install.pi-hole.net | bash`, paste into your terminal, and run, following the prompts to finish.
+8) Set a static IP for Pi-hole so devices always know where to reach it.
+9) I recommend Google or Cloudflare for upstream DNS resolvers.
+10) Query logging allows you to see all queries. Choosing yes here allows you to see which ad domains were blocked.
+11) I chose the show everything option for more comprehensive logs.
+12) Note the Pi-hole's static IP and web login
+13) Go check out the web GUI at `https://[Pi-hole_static_IP]/admin`
 
 # Acknowledgements
 - [WesOps](https://www.youtube.com/watch?v=d_3h5n9mPdI) on YouTube. His video was what introduced me to Pi-hole and inspired me to give this a try.
