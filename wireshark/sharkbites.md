@@ -34,10 +34,12 @@ The general flow goes like this:
 
 On a secured private/home network with only trusted devices, the risk is much lower, and these protocols will usually “just work” without obvious issues. However, on public or untrusted Wi-Fi (airports, cafés, hotels, etc.), you have no control over who is on the same network, which makes these weaknesses very attractive to attackers. Because I use a laptop that may connect to public Wi-Fi, I’ve chosen to disable WPAD, LLMNR, and NetBIOS. It’s good hardening practice, and I don’t rely on any legacy services that require them.
 
-Disabling WPAD:
+**Disabling WPAD:**
+1) Open Control Panel -> Navigate to Network and Internet.
+3) Click Internet Options -> Lan Settings -> Uncheck "Automatically detect settings".
 ![Disable WPAD](disablewpad.png)
 
-Disabling LLMNR:
+**Disabling LLMNR:**
 1) Press Win + R, type `regedit`, press enter.
 2) Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT`.
 3) Find a folder/key named `DNSClient` under `Windows NT`. Create it if it does not exist.
@@ -51,7 +53,7 @@ Ping an invalid hostname again, while capturing with Wireshark to verify LLMNR i
 ![LLMNR disabled](llmnr-disabled.png)
 No LLMNR packets were detected.
 
-Disabling NetBIOS:
+**Disabling NetBIOS:**
 1) Press Win + R, type `ncpa.cpl`, press enter.
 2) Right click the active adapter (in my case it is Wi-Fi), click on Properties.
 3) Select Internet Protocol Version 4 (TCP/IPv4), click on Properties.
