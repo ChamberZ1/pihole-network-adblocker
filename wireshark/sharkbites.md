@@ -66,3 +66,7 @@ No LLMNR packets were detected.
 Run `ipconfig /all` again to verify NetBIOS has been disabled.
 ![netbios disabled](netbios-disabled.png)
 
+Using Wireshark to capture DNS traffic again, I no longer see DNS queries for `wpad.lan`, confirming that WPAD auto-detection has been disabled.
+![goodbye wpad](confirm-wpad-off.png)
+
+---
