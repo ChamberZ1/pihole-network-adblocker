@@ -34,7 +34,17 @@ Disabling WPAD:
 ![Disable WPAD](disablewpad.png)
 
 Disabling LLMNR:
+1) Press Win + R, type `regedit`, press enter.
+2) Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT`.
+3) Find a folder/key named `DNSClient` under `Windows NT`. Create it if it does not exist.
+4) In DNSClient, Right-click → New → DWORD (32-bit) Value.
+5) Name it `EnableMulticast`.
+6) Set `Value data` to `0`, (0 == LLMNR disabled).
+7) Reboot adapter to ensure setting takes effect.
+![Disable LLMNR](disable-llmnr.png)
 
+Ping an invaid hostname again while capturing with Wireshark to verify LLMNR is disabled.
+![LLMNR disabled](llmnr-disabled.png)
 
 Disabling NetBIOS:
 1) Press Win + R, type `ncpa.cpl`, press enter.
@@ -45,4 +55,6 @@ Disabling NetBIOS:
 6) Under NetBIOS setting, select "Disable NetBIOS over TCP/IP"
 ![disable netbios](disable-netbios.png)
 
-8) End off by fixing formatting and making sure all iamges are properly added and included in here.
+Run `ipconfig /all` again to verify NetBIOS has been disabled.
+![netbios disabled](netbios-disabled.png)
+
