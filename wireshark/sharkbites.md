@@ -45,6 +45,7 @@ Disabling LLMNR:
 
 Ping an invaid hostname again while capturing with Wireshark to verify LLMNR is disabled.
 ![LLMNR disabled](llmnr-disabled.png)
+No LLMNR packets were detected.
 
 Disabling NetBIOS:
 1) Press Win + R, type `ncpa.cpl`, press enter.
@@ -52,7 +53,8 @@ Disabling NetBIOS:
 3) Select Internet Protocol Version 4 (TCP/IPv4), click on Properties.
 4) In the IPv4 window, click Advanced.
 5) Go to the WINS tab.
-6) Under NetBIOS setting, select "Disable NetBIOS over TCP/IP"
+6) Under NetBIOS setting, select "Disable NetBIOS over TCP/IP".
+
 ![disable netbios](disable-netbios.png)
 
 Run `ipconfig /all` again to verify NetBIOS has been disabled.
