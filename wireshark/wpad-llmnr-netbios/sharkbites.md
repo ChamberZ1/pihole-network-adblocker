@@ -70,3 +70,7 @@ Using Wireshark to capture DNS traffic again, I no longer see DNS queries for `w
 ![goodbye wpad](confirm-wpad-off.png)
 
 ---
+
+## 12/15/2025 Update
+My laptop was sending WPAD queries again. I looked up how to disable WPAD, and found this [Reddit post](https://www.reddit.com/r/sysadmin/comments/1b7vxy9/disabling_wpad_which_is_the_preferred_way/). I followed the ones I could to disable WPAD and this is what I ended up doing:
+
